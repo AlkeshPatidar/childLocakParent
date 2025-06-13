@@ -11,6 +11,13 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		1DE0CC5D62B744D0B379609A /* Excon-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2177D97B80F4D7D867C49BC /* Excon-Black.otf */; };
+		1F9117A44C4941298D7E328B /* Excon-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 252BAE9C70D64180A4371DBA /* Excon-Bold.otf */; };
+		E717104798324948B9765D71 /* Excon-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE8FC72F2C524BAFA7BF3D4F /* Excon-Light.otf */; };
+		0A719FDEF6DA467B8C3CE8A3 /* Excon-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60007992CEF44AECB28AAA8B /* Excon-Medium.otf */; };
+		29020456991A47D0802F2CD6 /* Excon-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8886CE7AF1420CB9221F8C /* Excon-Regular.otf */; };
+		8DC843E0D32D460E88199063 /* Excon-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85434CDA390D47B389761D8B /* Excon-Thin.otf */; };
+		F1600DB0A858454EAC2AC413 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C5B73845D26471181E7E47C /* index.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,13 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Childlockretailer/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Childlockretailer/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A2177D97B80F4D7D867C49BC /* Excon-Black.otf */ = {isa = PBXFileReference; name = "Excon-Black.otf"; path = "../src/assets/Fonts/Excon-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		252BAE9C70D64180A4371DBA /* Excon-Bold.otf */ = {isa = PBXFileReference; name = "Excon-Bold.otf"; path = "../src/assets/Fonts/Excon-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AE8FC72F2C524BAFA7BF3D4F /* Excon-Light.otf */ = {isa = PBXFileReference; name = "Excon-Light.otf"; path = "../src/assets/Fonts/Excon-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		60007992CEF44AECB28AAA8B /* Excon-Medium.otf */ = {isa = PBXFileReference; name = "Excon-Medium.otf"; path = "../src/assets/Fonts/Excon-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1D8886CE7AF1420CB9221F8C /* Excon-Regular.otf */ = {isa = PBXFileReference; name = "Excon-Regular.otf"; path = "../src/assets/Fonts/Excon-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		85434CDA390D47B389761D8B /* Excon-Thin.otf */ = {isa = PBXFileReference; name = "Excon-Thin.otf"; path = "../src/assets/Fonts/Excon-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C5B73845D26471181E7E47C /* index.js */ = {isa = PBXFileReference; name = "index.js"; path = "../src/assets/Fonts/index.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				82330CBEC7314021A240D512 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -115,6 +130,21 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		82330CBEC7314021A240D512 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A2177D97B80F4D7D867C49BC /* Excon-Black.otf */,
+				252BAE9C70D64180A4371DBA /* Excon-Bold.otf */,
+				AE8FC72F2C524BAFA7BF3D4F /* Excon-Light.otf */,
+				60007992CEF44AECB28AAA8B /* Excon-Medium.otf */,
+				1D8886CE7AF1420CB9221F8C /* Excon-Regular.otf */,
+				85434CDA390D47B389761D8B /* Excon-Thin.otf */,
+				3C5B73845D26471181E7E47C /* index.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -185,6 +215,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				1DE0CC5D62B744D0B379609A /* Excon-Black.otf in Resources */,
+				1F9117A44C4941298D7E328B /* Excon-Bold.otf in Resources */,
+				E717104798324948B9765D71 /* Excon-Light.otf in Resources */,
+				0A719FDEF6DA467B8C3CE8A3 /* Excon-Medium.otf in Resources */,
+				29020456991A47D0802F2CD6 /* Excon-Regular.otf in Resources */,
+				8DC843E0D32D460E88199063 /* Excon-Thin.otf in Resources */,
+				F1600DB0A858454EAC2AC413 /* index.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

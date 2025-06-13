@@ -1,0 +1,33 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/Fonts/Excon-Black.otf",
+      "sha1": "5b0d3f781db4d981e8f8366202867e90175f071a"
+    },
+    {
+      "path": "src/assets/Fonts/Excon-Bold.otf",
+      "sha1": "77e2af36b8eb84cc04bc2a3203c8feeb74e36a6f"
+    },
+    {
+      "path": "src/assets/Fonts/Excon-Light.otf",
+      "sha1": "2fba38c61518854d10627f480b6a45bacf7cad93"
+    },
+    {
+      "path": "src/assets/Fonts/Excon-Medium.otf",
+      "sha1": "f6c284eb8e4cd28fb841d0eff2147adfffbf6d3d"
+    },
+    {
+      "path": "src/assets/Fonts/Excon-Regular.otf",
+      "sha1": "cc0cbe53dbd6d3907e246c69782e28f2b036ad97"
+    },
+    {
+      "path": "src/assets/Fonts/Excon-Thin.otf",
+      "sha1": "176a3456d449126dc60ade0522fced5d8e72e8fb"
+    },
+    {
+      "path": "src/assets/Fonts/index.js",
+      "sha1": "92731712729a77f8e10f283e39e5d341038263ce"
+    }
+  ]
+}
