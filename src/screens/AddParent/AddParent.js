@@ -2,7 +2,7 @@ import { ImageBackground, StyleSheet, TouchableOpacity, View } from "react-nativ
 import IMG from "../../assets/Images";
 import { App_Primary_color } from "../../common/Colors/colors";
 import Row from "../../components/wrapper/row";
-import { AddParentBtn, BackIconBtn } from "../../assets/SVGs";
+import { AddParentBtn, BackIconBtn, BackIconOnly } from "../../assets/SVGs";
 import CustomText from "../../components/TextComponent";
 import { FONTS_FAMILY } from "../../assets/Fonts";
 import CustomInputField from "../../components/wrapper/CustomInput";
@@ -18,18 +18,36 @@ const AddParent = ({ navigation }) => {
         <ImageBackground source={IMG.AddParentBg}
             style={styles.container}
         >
-            <Row style={{
+           <Row style={{
                 padding: 25,
-                gap: 20
+                gap: 20,
+                paddingBottom:40
             }}>
-                <TouchableOpacity onPress={() => navigation.goBack()}>
+                {/* <TouchableOpacity onPress={() => navigation.goBack()}>
                     <BackIconBtn />
+                </TouchableOpacity> */}
+                 <TouchableOpacity onPress={() => navigation.goBack()}
+                    style={{
+                        borderWidth:0.4,
+                        borderColor:"white",
+                        alignItems:'center',
+                        justifyContent:'center',
+                        height:40,
+                        width:40,
+                        borderRadius:100,
+                        backgroundColor:'#1D1D1F',
+
+                    }}
+                    >
+                    {/* <DrawerIcon /> */}
+                    <BackIconOnly/>
+
                 </TouchableOpacity>
                 <CustomText style={{
                     color: 'white',
                     fontFamily: FONTS_FAMILY.Excon_Medium,
                     fontSize: 20,
-                    bottom: 13
+                    // bottom: 13
                 }}>Add Parent</CustomText>
             </Row>
             <View style={{ backgroundColor: 'white', height: 0.2, width: '100%', bottom: 20 }} />
@@ -87,6 +105,6 @@ export default AddParent;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: App_Primary_color
+        backgroundColor: 'black'
     }
 })

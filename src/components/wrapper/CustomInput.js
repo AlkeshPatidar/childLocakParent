@@ -24,7 +24,7 @@ const CustomInputField = ({
         <CustomText
           style={{
             position: 'absolute',
-            bottom: 60,
+            bottom: 65,
             color: 'white',
             fontFamily: FONTS_FAMILY.Excon_Medium,
             fontSize: 16,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     flex: 1,
     minWidth: 0,
     fontSize: 14,
-    color: '#333',
+    color: 'white',
     fontFamily: FONTS_FAMILY.PlusJakartaSans_Regular,
   },
   errorBorder: {

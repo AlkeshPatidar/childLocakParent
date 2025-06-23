@@ -15,7 +15,7 @@ const CarouselComponent = ({ data }) => {
                 <View style={styles.imageContainer}>
                     <Image
                         source={item}
-                        style={{ height: 120, width: '100%', borderRadius: 8 }}
+                        style={{ height: 140, width: '100%', borderRadius: 8 }}
                     //  resizeMode='contain'
                     />
                 </View>
@@ -32,6 +32,7 @@ const CarouselComponent = ({ data }) => {
                 dotStyle={styles.dotStyle}
                 inactiveDotOpacity={0.4}
                 inactiveDotScale={0.6}
+            
             />
         );
     };
@@ -109,12 +110,12 @@ const styles = StyleSheet.create({
         fontFamily: FONTS_FAMILY.Poppins_Medium,
     },
     paginationContainer: {
-        paddingVertical: verticalScale(2),
-        bottom: 8
+        paddingVertical: verticalScale(5),
+        // bottom: 8
     },
     dotStyle: {
-        width: scale(8),
-        height: verticalScale(8),
+        width: scale(10),
+        height: verticalScale(5),
         borderRadius: 40,
         backgroundColor: 'white',
     },

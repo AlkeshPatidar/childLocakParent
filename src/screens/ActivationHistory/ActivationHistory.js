@@ -2,10 +2,11 @@ import { FlatList, ImageBackground, StyleSheet, TextInput, TouchableOpacity, Vie
 import IMG from "../../assets/Images"
 import color, { App_Primary_color } from "../../common/Colors/colors";
 import Row from "../../components/wrapper/row";
-import { Activated, ActivationFilter, ActivationListToggle, BackIconBtn, ContactIcon, DownChevron, EmailIcon, IDIcon, SearchIcon, UserIcon } from "../../assets/SVGs";
+import { Activated, ActivationFilter, ActivationListToggle, BackIconBtn, BackIconOnly, ContactIcon, DownChevron, EmailIcon, IDIcon, SearchIcon, UserIcon } from "../../assets/SVGs";
 import CustomText from "../../components/TextComponent";
 import { FONTS_FAMILY } from "../../assets/Fonts";
 import SpaceBetweenRow from "../../components/wrapper/spacebetween";
+import LinearGradient from "react-native-linear-gradient";
 
 
 const ActivationHistory = ({ navigation }) => {
@@ -14,7 +15,7 @@ const ActivationHistory = ({ navigation }) => {
     const renderActivationList = () => {
         return (
             <>
-               
+
                 <View style={styles.ActivationList}>
                     <FlatList
                         data={[1, 2, 3, 4, 5]}
@@ -62,6 +63,38 @@ const ActivationHistory = ({ navigation }) => {
     return (
         <ImageBackground source={IMG.ParentListBg} style={styles.container}>
             <Row style={{
+                padding: 25,
+                gap: 20,
+                paddingBottom: 40
+            }}>
+                {/* <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <BackIconBtn />
+                </TouchableOpacity> */}
+                <TouchableOpacity onPress={() => navigation.goBack()}
+                    style={{
+                        borderWidth: 0.4,
+                        borderColor: "white",
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        height: 40,
+                        width: 40,
+                        borderRadius: 100,
+                        backgroundColor: '#1D1D1F',
+
+                    }}
+                >
+                    {/* <DrawerIcon /> */}
+                    <BackIconOnly />
+
+                </TouchableOpacity>
+                <CustomText style={{
+                    color: 'white',
+                    fontFamily: FONTS_FAMILY.Excon_Medium,
+                    fontSize: 20,
+                    // bottom: 13
+                }}>Activation History</CustomText>
+            </Row>
+            {/* <Row style={{
                 padding: 16,
                 gap: 10
             }}>
@@ -74,7 +107,7 @@ const ActivationHistory = ({ navigation }) => {
                     fontFamily: FONTS_FAMILY.Excon_Regular,
                     bottom: 10
                 }}>Activation History</CustomText>
-            </Row>
+            </Row> */}
             <View style={{ height: 0.3, backgroundColor: 'white', width: '100%', bottom: 20 }} />
             <Row style={{
                 borderWidth: 0.4,
@@ -102,7 +135,7 @@ const ActivationHistory = ({ navigation }) => {
 
                     }}
                 >Total Results: 4</CustomText>
-                <View style={{
+                {/* <View style={{
                     height: 31,
                     width: 142,
                     backgroundColor: '#A3A3A3',
@@ -117,7 +150,29 @@ const ActivationHistory = ({ navigation }) => {
                         color: 'white'
                     }}>Todays Activation</CustomText>
                     <DownChevron />
-                </View>
+                </View> */}
+
+                <LinearGradient
+                    colors={['#585858', '#353536']} // From lighter gray to darker gray
+                    start={{ x: 1, y: 0 }}
+                    end={{ x: 1, y: 1 }}
+                    style={{
+                        height: 31,
+                        width: 155,
+                        borderRadius: 23,
+                        paddingHorizontal: 10,
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                        justifyContent: 'space-between'
+                    }}
+                >
+                    <CustomText style={{
+                        color: '#A3A3A3',
+                        fontSize: 14,
+                        fontFamily: FONTS_FAMILY.Excon_Regular
+                    }}>Todays Activation</CustomText>
+                    <DownChevron />
+                </LinearGradient>
 
             </SpaceBetweenRow>
             {renderActivationList()}

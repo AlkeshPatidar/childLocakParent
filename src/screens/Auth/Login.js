@@ -28,15 +28,15 @@ const Login = ({ navigation }) => {
                 paddingHorizontal: 16
             }}>
                 <LoginAccountText />
-                <View style={{ width: '100%', marginTop: 40, gap: 30 }}>
+                <View style={{ width: '100%', marginTop: 50, gap: 30 }}>
                     <CustomInputField
                         label={'Username'}
-                        placeholder={'Enter username'}
+                        placeholder={'Enter Username'}
                     />
 
                     <CustomInputField
                         label={'Password'}
-                        placeholder={'Enter password'}
+                        placeholder={'Enter Password'}
                     />
 
                 </View>

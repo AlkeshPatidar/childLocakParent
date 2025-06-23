@@ -2,7 +2,7 @@ import { FlatList, ImageBackground, StyleSheet, TextInput, TouchableOpacity, Vie
 import IMG from "../../assets/Images"
 import color, { App_Primary_color } from "../../common/Colors/colors";
 import Row from "../../components/wrapper/row";
-import { BackIconBtn, ContactIcon, EmailIcon, IDIcon, SearchIcon, UserIcon } from "../../assets/SVGs";
+import { BackIconBtn, BackIconOnly, ContactIcon, EmailIcon, IDIcon, SearchIcon, UserIcon } from "../../assets/SVGs";
 import CustomText from "../../components/TextComponent";
 import { FONTS_FAMILY } from "../../assets/Fonts";
 import SpaceBetweenRow from "../../components/wrapper/spacebetween";
@@ -11,18 +11,36 @@ import SpaceBetweenRow from "../../components/wrapper/spacebetween";
 const ParentList = ({navigation}) => {
     return (
         <ImageBackground source={IMG.ParentListBg} style={styles.container}>
-            <Row style={{
-                padding: 16,
-                gap: 10
+          <Row style={{
+                padding: 25,
+                gap: 20,
+                paddingBottom:40
             }}>
-                <TouchableOpacity onPress={()=>navigation.goBack()}>
+                {/* <TouchableOpacity onPress={() => navigation.goBack()}>
                     <BackIconBtn />
+                </TouchableOpacity> */}
+                 <TouchableOpacity onPress={() => navigation.goBack()}
+                    style={{
+                        borderWidth:0.4,
+                        borderColor:"white",
+                        alignItems:'center',
+                        justifyContent:'center',
+                        height:40,
+                        width:40,
+                        borderRadius:100,
+                        backgroundColor:'#1D1D1F',
+
+                    }}
+                    >
+                    {/* <DrawerIcon /> */}
+                    <BackIconOnly/>
+
                 </TouchableOpacity>
                 <CustomText style={{
                     color: 'white',
+                    fontFamily: FONTS_FAMILY.Excon_Medium,
                     fontSize: 20,
-                    fontFamily: FONTS_FAMILY.Excon_Regular,
-                    bottom: 10
+                    // bottom: 13
                 }}>Parent List</CustomText>
             </Row>
             <View style={{ height: 0.3, backgroundColor: 'white', width: '100%', bottom: 20 }} />

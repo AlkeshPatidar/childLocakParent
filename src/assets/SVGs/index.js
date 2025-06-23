@@ -40,6 +40,10 @@ import LockWhite from './lockWhite.svg';
 import UserAddplus from './UserAddplus.svg';
 import RightChev from './rightChv.svg';
 
+import ListParentStramLine from './listParentStramLine.svg';
+import DrawerLine from './drawerLine.svg';
+import BackIconOnly from './BackIconOnly.svg';
+
 
 
 
@@ -81,5 +85,8 @@ export {
     ContactIcon,
     EmailIcon,
     IDIcon,
-    DownChevron
+    DownChevron,
+    ListParentStramLine,
+      DrawerLine,
+    BackIconOnly
 };

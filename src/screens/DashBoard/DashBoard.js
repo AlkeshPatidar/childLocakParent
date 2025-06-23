@@ -1,7 +1,7 @@
 import { FlatList, Image, ImageBackground, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native"
 import { App_Primary_color } from "../../common/Colors/colors";
 import Row from "../../components/wrapper/row";
-import { Activated, ActivationFilter, ActivationListToggle, AddParent, DashboardOverView, DoFour, DoOne, DOThree, DoTwo, DownChevron, DrawerIcon, ListParent, ReportsToggle, ReportsUi, UserAddplus } from "../../assets/SVGs";
+import { Activated, ActivationFilter, ActivationListToggle, AddParent, DashboardOverView, DoFour, DoOne, DOThree, DoTwo, DownChevron, DrawerIcon, DrawerLine, ListParent, ListParentStramLine, ReportsToggle, ReportsUi, UserAddplus } from "../../assets/SVGs";
 import CustomText from "../../components/TextComponent";
 import { FONTS_FAMILY } from "../../assets/Fonts";
 import IMG from "../../assets/Images";
@@ -9,6 +9,7 @@ import SpaceBetweenRow from "../../components/wrapper/spacebetween";
 import CarouselComponent from './Crousel'
 import { useState } from "react";
 import CustomDrawer from "../../components/Modals/CustomDrawer/CustomDrawerModel";
+import LinearGradient from "react-native-linear-gradient";
 
 
 const Dashboard = ({ navigation }) => {
@@ -19,7 +20,7 @@ const Dashboard = ({ navigation }) => {
     const renderOverView = () => {
         return (
             <>
-                <DashboardOverView style={{ alignSelf: 'center' }} />
+                <DashboardOverView style={{ alignSelf: 'center' , zIndex:1000}} />
                 <ImageBackground source={IMG.DOBg}
                     style={styles.DOBg}
                     resizeMode="contain"
@@ -90,7 +91,7 @@ const Dashboard = ({ navigation }) => {
             <Row style={{
                 alignSelf: 'center',
                 gap: 16,
-                marginTop: 15
+                marginTop: 20
             }}>
                 <TouchableOpacity style={{
                 }}
@@ -102,7 +103,7 @@ const Dashboard = ({ navigation }) => {
                             width: 110,
                             alignItems: 'center',
                             justifyContent: 'center',
-                            gap: 5
+                            gap: 8
                         }}
                     >
                     <UserAddplus  />
@@ -130,10 +131,10 @@ const Dashboard = ({ navigation }) => {
                             width: 110,
                             alignItems: 'center',
                             justifyContent: 'center',
-                            gap: 5
+                            gap: 8
                         }}
                     >
-                    <UserAddplus  />
+                    <ListParentStramLine  />
                      <CustomText style={{
                             color: 'white',
                             fontSize: 11,
@@ -148,7 +149,9 @@ const Dashboard = ({ navigation }) => {
 
     const renderActivationList = () => {
         return (
-            <View>
+            <View style={{
+                marginTop:20,
+            }}>
                 {/* <ActivationListToggle style={{
                     // position:'absolute',
                     // bottom:0
@@ -185,7 +188,7 @@ const Dashboard = ({ navigation }) => {
                                 <ActivationFilter />
                             </TouchableOpacity> */}
                             <TouchableOpacity onPress={() => setIsFIlterOpen(isFIlterOpen => !isFIlterOpen)}>
-                                <SpaceBetweenRow style={{
+                                {/* <SpaceBetweenRow style={{
                                 borderWidth: 1,
                                 borderColor: '#A3A3A3',
                                 backgroundColor: '#585858',
@@ -202,7 +205,30 @@ const Dashboard = ({ navigation }) => {
                                     fontFamily: FONTS_FAMILY.Excon_Regular
                                 }}>Todays Activations</CustomText>
                                 <DownChevron />
-                            </SpaceBetweenRow>
+                            </SpaceBetweenRow> */}
+                                 <LinearGradient
+                                colors={['#585858', '#353536']} // From lighter gray to darker gray
+                                start={{ x: 1, y: 0 }}
+                                end={{ x: 1, y: 1 }}
+                                style={{
+                                    // borderWidth: 1,
+                                    borderColor: '#A3A3A3',
+                                    height: 31,
+                                    width: 170,
+                                    borderRadius: 100,
+                                    paddingHorizontal: 10,
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center'
+                                }}
+                            >
+                                <CustomText style={{
+                                    color: '#A3A3A3',
+                                    fontSize: 14,
+                                    fontFamily: FONTS_FAMILY.Excon_Regular
+                                }}>Todays Activations</CustomText>
+                                <DownChevron />
+                            </LinearGradient>
                             </TouchableOpacity>
                             {isFIlterOpen && <View style={{
                                 height: 178,
@@ -258,7 +284,7 @@ const Dashboard = ({ navigation }) => {
 
 
                     <FlatList
-                        data={[1, 2, 3, 4, 5]}
+                        data={[1, 2, 3, 4,]}
 
                         renderItem={({ item }) => (
                             <ImageBackground source={IMG.ActivationListBg}
@@ -345,9 +371,22 @@ const Dashboard = ({ navigation }) => {
     return (
         <View style={styles?.container}>
             <Row style={styles.Header}>
-                <TouchableOpacity onPress={()=>setIsDraweOpen(true)}>
+                {/* <TouchableOpacity onPress={()=>setIsDraweOpen(true)}>
 
                 <DrawerIcon />
+                </TouchableOpacity> */}
+                    <TouchableOpacity onPress={() => setIsDraweOpen(true)}
+                    style={{
+                        borderWidth:0.4,
+                        borderColor:'white',
+                        padding:10,
+                        borderRadius:100,
+                        backgroundColor:'#1D1D1F'
+                    }}
+                    >
+                    {/* <DrawerIcon /> */}
+                    <DrawerLine/>
+
                 </TouchableOpacity>
                 <CustomText style={styles.headerText}>Hello, Retailer</CustomText>
             </Row>
@@ -373,7 +412,7 @@ export default Dashboard;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: App_Primary_color
+        backgroundColor: 'black'
     },
     Header: {
         padding: 20,
@@ -383,13 +422,14 @@ const styles = StyleSheet.create({
     headerText: {
         color: 'white',
         fontSize: 20, fontFamily: FONTS_FAMILY.Excon_Regular,
-        bottom: 15
+        // bottom: 15
     },
     DOBg: {
         height: 190,
         width: '100%',
         // justifyContent:'center'
         // padding:40
+        marginTop:-23
     },
     DoText: {
         color: 'white',
@@ -403,7 +443,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     ActivationList: {
-        backgroundColor: 'black',
+        backgroundColor: App_Primary_color,
         height: 538,
         marginHorizontal: 20,
         borderRadius: 15,

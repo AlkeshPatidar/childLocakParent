@@ -17,7 +17,7 @@ const MainApp = () => {
   const loaderVisible = useSelector(state => state?.loader?.loader);
 
   return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: App_Primary_color }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
         <StatusBar
           barStyle={'light-content'}
           backgroundColor={App_Primary_color}
